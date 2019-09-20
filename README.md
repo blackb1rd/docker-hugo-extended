@@ -1,5 +1,7 @@
 # Hugo-extended Docker Image
 
+https://hub.docker.com/r/s4m3l0/hugo-rsync-mozjpeg-node/
+
 [![Docker Pulls](https://img.shields.io/docker/pulls/s4m3l0/hugo-rsync-mozjpeg-node.svg)](https://store.docker.com/community/images/s4m3l0/hugo-rsync-mozjpeg-node)
 
 [Hugo](https://gohugo.io/) is a static site generator, written in Go.
