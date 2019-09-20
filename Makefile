@@ -15,7 +15,7 @@ SASS_BIN     = /usr/local/bin/sass
 docker-image:
 	$(DOCKER) build . \
 	--tag $(DOCKER_IMAGE) \
-	--tag latest \
+	--tag $(DOCKER_ACC)/$(DOCKER_NAME):latest \
 	--build-arg HUGO_VERSION=$(HUGO_VERSION) \
 	--build-arg MOZJPEG_VERSION=$(MOZJPEG_VERSION) \
 	--build-arg NODE_VERSION=$(NODE_VERSION) \
@@ -23,3 +23,4 @@ docker-image:
 
 docker-push:
 	docker push $(DOCKER_IMAGE)
+	docker push $(DOCKER_ACC)/$(DOCKER_NAME):latest
