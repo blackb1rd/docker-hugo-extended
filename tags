@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/f07b0a9/
+DOCKER	Makefile	/^DOCKER       = docker$/;"	m
+DOCKER_ACC	Makefile	/^DOCKER_ACC   = s4m3l0$/;"	m
+DOCKER_IMAGE	Makefile	/^DOCKER_IMAGE = $(DOCKER_ACC)\/$(DOCKER_NAME):$(DOCKER_TAG)$/;"	m
+DOCKER_NAME	Makefile	/^DOCKER_NAME  = hugo-rsync-mozjpeg-node$/;"	m
+DOCKER_RUN	Makefile	/^DOCKER_RUN   = $(DOCKER) run --rm --interactive --tty --volume $(CURDIR):\/src$/;"	m
+DOCKER_TAG	Makefile	/^DOCKER_TAG   = v$(HUGO_VERSION)$/;"	m
+HUGO_VERSION	Makefile	/^HUGO_VERSION = 0.58.2$/;"	m
+Hugo-extended Docker Image	README.md	/^# Hugo-extended Docker Image$/;"	c
+MOZJPEG_VERSION	Makefile	/^MOZJPEG_VERSION = 3.3.1$/;"	m
+SASS_BIN	Makefile	/^SASS_BIN     = \/usr\/local\/bin\/sass$/;"	m
+docker-image	Makefile	/^docker-image:$/;"	t
+docker-push	Makefile	/^docker-push:$/;"	t
