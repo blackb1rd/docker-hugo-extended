@@ -1,13 +1,12 @@
 FROM alpine:3.10.2
 
-ENV NODE_VERSION 12.10.0
-ENV YARN_VERSION 1.17.3
-
 LABEL description="Docker container for building static sites with the Hugo static site generator with extended."
 LABEL maintainer="Prachya Saechua<blackb1rd@blackb1rd.me>"
 
 ARG HUGO_VERSION
 ARG MOZJPEG_VERSION
+ARG NODE_VERSION
+ARG YARN_VERSION
 
 RUN apk add --no-cache \
       libstdc++ \
