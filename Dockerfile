@@ -25,6 +25,7 @@ RUN apk add --no-cache \
         gcc \
         git \
         gnupg \
+        gzip \
         libgcc \
         libstdc++ \
         libtool \
