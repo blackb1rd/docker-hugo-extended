@@ -33,6 +33,7 @@ RUN apk add --no-cache \
         nasm \
         pkgconf \
         python \
+        tar \
     && mkdir -p /usr/local/src \
     && cd /usr/local/src \
     && curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -xz \
