@@ -37,7 +37,7 @@ RUN apk add --no-cache \
         tar \
     && mkdir -p /usr/local/src \
     && cd /usr/local/src \
-    && curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -xz \
+    && curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -xzf \
     && mv hugo /usr/local/bin/hugo \
     && addgroup -Sg 1000 hugo \
     && adduser -Sg hugo -u 1000 -h /src hugo \
