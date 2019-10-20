@@ -1,9 +1,9 @@
 FROM alpine:3.10.2
 
-ENV HUGO_VERSION = "0.58.3" \
-    MOZJPEG_VERSION = "3.3.1" \
-    NODE_VERSION = "12.12.0" \
-    YARN_VERSION = "1.19.1"
+ENV HUGO_VERSION="0.58.3" \
+    MOZJPEG_VERSION="3.3.1" \
+    NODE_VERSION="12.12.0" \
+    YARN_VERSION="1.19.1"
 
 LABEL description="Docker container for building static sites with the Hugo static site generator with extended."
 LABEL maintainer="Prachya Saechua<blackb1rd@blackb1rd.me>"
@@ -37,7 +37,7 @@ RUN apk add --no-cache \
         tar \
     && mkdir -p /usr/local/src \
     && cd /usr/local/src \
-    && curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -xzvf- \
+    && curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -xz \
     && mv hugo /usr/local/bin/hugo \
     && addgroup -Sg 1000 hugo \
     && adduser -Sg hugo -u 1000 -h /src hugo \
