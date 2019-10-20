@@ -1,12 +1,12 @@
 FROM alpine:3.10.2
 
+ENV HUGO_VERSION = "0.58.3" \
+    MOZJPEG_VERSION = "3.3.1" \
+    NODE_VERSION = "12.12.0" \
+    YARN_VERSION = "1.19.1"
+
 LABEL description="Docker container for building static sites with the Hugo static site generator with extended."
 LABEL maintainer="Prachya Saechua<blackb1rd@blackb1rd.me>"
-
-ARG HUGO_VERSION
-ARG MOZJPEG_VERSION
-ARG NODE_VERSION
-ARG YARN_VERSION
 
 RUN apk add --no-cache \
       libstdc++ \
