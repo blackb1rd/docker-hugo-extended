@@ -9,6 +9,7 @@ https://hub.docker.com/r/s4m3l0/hugo-rsync-mozjpeg-node/
 [Hugo](https://gohugo.io/) is a static site generator, written in Go.
 
 This Docker Image is based on Alpine and included with
+- hugo-extended
 - rsync
 - mozjpeg
 - node with yarn
