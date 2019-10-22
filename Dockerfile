@@ -47,9 +47,8 @@ RUN apk add --no-cache \
     && autoreconf -fiv \
     && ./configure --prefix=/opt/mozjpeg \
     && make install && cd .. \
-    && rm -rf mozjpeg-${MOZJPEG_VERSION}
-
-RUN for key in \
+    && rm -rf mozjpeg-${MOZJPEG_VERSION} \
+    && for key in \
     94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
     FD3A5288F042B6850C66B31F09FE44734EB7990E \
     71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 \
@@ -77,9 +76,8 @@ RUN for key in \
     && make install \
     && cd .. \
     && rm -Rf "node-v$NODE_VERSION" \
-    && rm "node-v$NODE_VERSION.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt
-
-RUN wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --import \
+    && rm "node-v$NODE_VERSION.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt \
+    && wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --import \
     && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz" \
     && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc" \
     && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
