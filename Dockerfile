@@ -1,9 +1,9 @@
 FROM alpine:3.10.3
 
-ENV HUGO_VERSION="0.60.1" \
+ENV HUGO_VERSION="0.61.0" \
     MOZJPEG_VERSION="3.3.1" \
     NODE_VERSION="12.13.1" \
-    YARN_VERSION="1.19.2"
+    YARN_VERSION="1.21.0"
 
 LABEL description="Docker container for building static sites with the Hugo static site generator with extended."
 LABEL maintainer="Prachya Saechua<blackb1rd@blackb1rd.me>"
