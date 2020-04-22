@@ -3,6 +3,9 @@ FROM node:lts-alpine
 LABEL description="Docker container for building static sites with the Hugo static site generator with extended."
 LABEL maintainer="Prachya Saechua<blackb1rd@blackb1rd.me>"
 
+ARG HUGO_VERSION
+ARG MOZJPEG_VERSION
+
 RUN apk add --no-cache \
       libstdc++ \
       openssh-client \
