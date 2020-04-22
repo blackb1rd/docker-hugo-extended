@@ -1,10 +1,10 @@
 FROM node:lts-alpine
 
+ENV HUGO_VERSION="0.69.1" \
+    MOZJPEG_VERSION="3.3.1"
+
 LABEL description="Docker container for building static sites with the Hugo static site generator with extended."
 LABEL maintainer="Prachya Saechua<blackb1rd@blackb1rd.me>"
-
-ARG HUGO_VERSION
-ARG MOZJPEG_VERSION
 
 RUN apk add --no-cache \
       libstdc++ \
