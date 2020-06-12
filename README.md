@@ -1,6 +1,6 @@
 # Hugo-extended Docker Image
 
-https://hub.docker.com/r/s4m3l0/hugo-rsync-mozjpeg-node/
+https://hub.docker.com/r/s4m3l0/hugo-rsync-node-optimg/
 
 
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/s4m3l0/hugo-rsync-mozjpeg-node.svg)](https://img.shields.io/microbadger/layers/s4m3l0/hugo-rsync-mozjpeg-node)
@@ -15,5 +15,6 @@ https://hub.docker.com/r/s4m3l0/hugo-rsync-mozjpeg-node/
 This Docker Image is based on Alpine and included with
 - hugo-extended
 - rsync
-- mozjpeg
 - node with yarn
+- mozjpeg (/opt/mozjpeg/)
+- pngquant (/opt/pngquant/)

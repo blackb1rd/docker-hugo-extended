@@ -25,6 +25,7 @@ RUN apk add --no-cache \
         gnupg \
         gzip \
         libgcc \
+        libpng-dev \
         libstdc++ \
         libtool \
         linux-headers \
@@ -47,6 +48,11 @@ RUN apk add --no-cache \
     && ./configure --prefix=/opt/mozjpeg \
     && make install && cd .. \
     && rm -rf mozjpeg-${MOZJPEG_VERSION} \
+    && git clone --recursive https://github.com/kornelski/pngquant.git \
+    && cd pngquant \
+    && ./configure --prefix=/opt/pngquant \
+    $$ make install && cd .. \
+    && rm -rf pngquant \
     && apk del .build-deps
 
 WORKDIR /src
