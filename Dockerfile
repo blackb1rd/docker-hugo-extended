@@ -25,7 +25,6 @@ RUN apk add --no-cache \
         gnupg \
         gzip \
         libgcc \
-        libpng-dev \
         libstdc++ \
         libtool \
         linux-headers \
