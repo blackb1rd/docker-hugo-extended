@@ -2,7 +2,7 @@ GIT              = git
 DOCKER           = docker
 DOCKER_NAME      = hugo-rsync-node-optimg
 DOCKER_ACC       = s4m3l0
-HUGO_VERSION     = 0.74.1
+HUGO_VERSION     = 0.74.2
 MOZJPEG_VERSION  = 3.3.1
 PNGQUANT_VERSION = 2.12.1
 DOCKER_VERSION   = 0
@@ -22,6 +22,7 @@ docker-push:
 	$(DOCKER) push $(DOCKER_IMAGE)
 	$(DOCKER) push $(DOCKER_ACC)/$(DOCKER_NAME):latest
 
-git-tag-public:
+release:
+	$(GIT) push origin master
 	$(GIT) tag $(DOCKER_TAG)
 	$(GIT) push --tags
