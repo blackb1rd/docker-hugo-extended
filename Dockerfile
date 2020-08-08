@@ -7,13 +7,14 @@ LABEL description="Docker container for building static sites with the Hugo stat
 LABEL maintainer="Prachya Saechua<blackb1rd@blackb1rd.me>"
 
 RUN apk add --no-cache \
-      libstdc++ \
-      openssh-client \
-      rsync \
       bash \
       libc6-compat \
       libpng-dev \
+      libstdc++ \
+      openssh-client \
+      perl \
       pngquant \
+      rsync \
       zlib-dev \
     && apk add --update --no-cache --virtual .build-deps \
         autoconf \
