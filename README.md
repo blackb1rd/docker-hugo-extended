@@ -17,4 +17,5 @@ This Docker Image is based on Alpine and included with
 - rsync
 - node with yarn
 - mozjpeg (/opt/mozjpeg/)
-- pngquant (/opt/pngquant/)
+- pngquant
+- webp

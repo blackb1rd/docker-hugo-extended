@@ -11,6 +11,8 @@ RUN apk add --no-cache \
       libc6-compat \
       libpng-dev \
       libstdc++ \
+      libwebp \
+      libwebp-tools \
       openssh-client \
       perl \
       pngquant \
