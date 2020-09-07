@@ -14,6 +14,7 @@ RUN apk add --no-cache \
       libwebp \
       libwebp-tools \
       openssh-client \
+      exiftool \
       perl \
       pngquant \
       rsync \
