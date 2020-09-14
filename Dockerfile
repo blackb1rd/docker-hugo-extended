@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-ENV HUGO_VERSION="0.74.3" \
+ENV HUGO_VERSION="0.75.0" \
     MOZJPEG_VERSION="3.3.1"
 
 LABEL description="Docker container for building static sites with the Hugo static site generator with extended."
