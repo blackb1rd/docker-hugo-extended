@@ -3,7 +3,7 @@ FROM node:lts-alpine
 ENV NEOHUGO_VERSION="0.0.1-rc1" \
     MOZJPEG_VERSION="3.3.1"
 
-LABEL description="Docker container for building static sites with the Hugo static site generator with extended."
+LABEL description="Docker container for building static sites with the neohugo static site generator with extended."
 LABEL maintainer="Prachya Saechua<blackb1rd@blackb1rd.me>"
 
 RUN apk add --no-cache \
