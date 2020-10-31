@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-ENV HUGO_VERSION="0.76.4" \
+ENV NEOHUGO_VERSION="0.0.1-rc1" \
     MOZJPEG_VERSION="3.3.1"
 
 LABEL description="Docker container for building static sites with the Hugo static site generator with extended."
@@ -42,11 +42,11 @@ RUN apk add --no-cache \
         xz \
     && mkdir -p /usr/local/src \
     && cd /usr/local/src \
-    && curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -xz \
-    && mv hugo /usr/local/bin/hugo \
+    && curl -L https://github.com/neohugo/neohugo/releases/download/v${NEOHUGO_VERSION}/neohugo_extended_${NEOHUGO_VERSION}_Linux-64bit.tar.gz | tar -xz \
+    && mv neohugo /usr/local/bin/neohugo \
     && deluser --remove-home node \
-    && addgroup -Sg 1000 hugo \
-    && adduser -Sg hugo -u 1000 -h /src hugo \
+    && addgroup -Sg 1000 neohugo \
+    && adduser -Sg neohugo -u 1000 -h /src neohugo \
     && curl -L https://github.com/mozilla/mozjpeg/archive/v${MOZJPEG_VERSION}.tar.gz | tar -xz \
     && cd mozjpeg-${MOZJPEG_VERSION} \
     && autoreconf -fiv \
