@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-ENV NEOHUGO_VERSION="0.0.1-rc1" \
+ENV NEOHUGO_VERSION="0.1.0" \
     MOZJPEG_VERSION="3.3.1"
 
 LABEL description="Docker container for building static sites with the neohugo static site generator with extended."
