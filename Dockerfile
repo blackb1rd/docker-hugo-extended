@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 
-ENV NEOHUGO_VERSION="0.4.0" \
-    MOZJPEG_VERSION="3.3.1"
+ENV NEOHUGO_VERSION="0.4.1" \
+    MOZJPEG_VERSION="4.0.0"
 
 LABEL description="Docker container for building static sites with the neohugo static site generator with extended."
 LABEL maintainer="Prachya Saechua<blackb1rd@blackb1rd.me>"
@@ -10,6 +10,7 @@ RUN apk add --no-cache \
       bash \
       libc6-compat \
       libpng-dev \
+      libpng-static \
       libstdc++ \
       libwebp \
       libwebp-tools \
@@ -18,11 +19,13 @@ RUN apk add --no-cache \
       pngquant \
       rsync \
       zlib-dev \
+      zlib-static \
     && apk add --update --no-cache --virtual .build-deps \
         autoconf \
         automake \
         binutils-gold \
         build-base \
+        cmake \
         curl \
         g++ \
         gcc \
@@ -48,8 +51,7 @@ RUN apk add --no-cache \
     && adduser -Sg neohugo -u 1000 -h /src neohugo \
     && curl -L https://github.com/mozilla/mozjpeg/archive/v${MOZJPEG_VERSION}.tar.gz | tar -xz \
     && cd mozjpeg-${MOZJPEG_VERSION} \
-    && autoreconf -fiv \
-    && ./configure --prefix=/opt/mozjpeg \
+    && cmake -DCMAKE_INSTALL_PREFIX=/opt/mozjpeg -DCMAKE_BUILD_TYPE=Release . \
     && make install && cd .. \
     && rm -rf mozjpeg-${MOZJPEG_VERSION} \
     && apk del .build-deps
